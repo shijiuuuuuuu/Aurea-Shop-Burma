@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+
+<h2>Seller Dashboard</h2>
+
+<input id="name" placeholder="Product Name"><br>
+<input id="price" placeholder="Price"><br>
+
+<button onclick="addProduct()">Add Product</button>
+
+<script>
+function addProduct() {
+  let name = document.getElementById("name").value;
+  let price = document.getElementById("price").value;
+
+  alert("Product Added: " + name);
+}
+</script>
+
+</body>
+</html>
