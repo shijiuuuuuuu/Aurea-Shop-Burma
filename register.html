@@ -1,0 +1,23 @@
+<h2>Register</h2>
+
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<input id="password" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<script>
+async function register() {
+  await fetch("http://localhost:3000/api/auth/register", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({
+      name: name.value,
+      phone: phone.value,
+      password: password.value
+    })
+  });
+
+  alert("Registered!");
+}
+</script>
